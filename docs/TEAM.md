@@ -84,6 +84,19 @@
 
 ---
 
+### 5. Evaluation Integration & Test Flow (Thế Việt)
+
+**Branch:** `theviet-evaluation`
+
+**Vai trò & Đóng góp:**
+- Tích hợp và kiểm thử luồng Benchmark Evaluation (Test Flow) cho cả 3 trạng thái: Baseline, Corrupted, Repaired
+- Đo lường và xác thực tính suy giảm (Hit Rate 100% → 60%) và phục hồi (100%) của RAG Agent
+- Báo cáo cá nhân: [`report/theviet_evaluation.md`](../report/theviet_evaluation.md)
+
+**Commit:** `06efb82 feat: complete evaluation testset and corruption suite by Anh Minh` (merged)
+
+---
+
 ## # Kết Quả Pipeline
 
 ### Phase 1 (Baseline)
