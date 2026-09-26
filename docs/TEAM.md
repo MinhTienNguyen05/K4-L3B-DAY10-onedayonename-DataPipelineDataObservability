@@ -1,58 +1,109 @@
 # Danh Sách Thành Viên & Báo Cáo Phân Công Nhóm
 
 - **Tên Nhóm:** `[Điền tên nhóm]`
-- **Mã Nhóm / Lớp:** `K4-L3-DAY10`
-- **Tên Repository Nộp Bài:** `K4-L3-DAY10-TenNhom-DataPipeline`
+- **Mã Nhóm / Lớp:** `K4-L3B-DAY10`
+- **Tên Repository Nộp Bài:** `K4-L3B-DAY10-TenNhom-DataPipeline`
 
 ---
 
 ## # Thành viên
 
-| STT | Họ và tên | MSSV | Email | Vai trò & Phân công công việc | Báo cáo cá nhân |
-|---:|---|---|---|---|---|
-| 1 | | | | Trưởng nhóm / Pipeline Integrator (`core/`, `phase1.py`, `corruption_flow.py`) | `report/<MSSV1>_HoTen.md` |
-| 2 | | | | Data Foundation & Recovery (`crossref.py`, `cleaning.py`, raw data) | `report/<MSSV2>_HoTen.md` |
-| 3 | | | | RAG & Vector Index (`retrieval/index.py`, `embeddings.py`, ChromaDB) | `report/<MSSV3>_HoTen.md` |
-| 4 | | | | Observability & Evaluation (`quality.py` GX 1.x, `testset.py`, reporting) | `report/<MSSV4>_HoTen.md` |
-
-*(Nếu nhóm có 3 hoặc 5-6 thành viên, xem bảng phân công chi tiết theo vai trò trong file `CHECKPOINTS.md`)*.
+| STT | Họ và tên | Branch | Vai trò & Phân công công việc | Commit |
+|---:|---|---|---|---|
+| 1 | Gia Huy | `giahuy-ingestion` | Data Foundation: `crossref.py`, `cleaning.py`, raw data | 0c22d60 |
+| 2 | Mạnh Hùng | `manhhung-observability` | Data Observability: `quality.py` (GX 1.x), `reporting.py` | 94fb267 |
+| 3 | Anh Minh | `anhminh-evaluation` | Evaluation & Corruption: `testset.py`, `corruption.py`, Support | 06efb82 |
+| 4 | Thế Việt | `theviet-evaluation` | Evaluation Integration: test flow | (merged) |
+| 5 | Minh Tiến | `minhtien-pipeline` | Pipeline Orchestration: `phase1.py`, `corruption_flow.py` | 1a463a9 |
 
 ---
 
-## # Cá nhân
+## # Báo Cáo Chi Tiết Theo Module
 
-### ## HoVaTen1-MSSV1
-- **Vai trò:** Trưởng nhóm & Điều phối Pipeline.
-- **Công việc chi tiết đã hoàn thành:**
-  - Thiết lập cấu hình hệ thống `core/config.py` và đường dẫn artifacts `core/utils.py`.
-  - Kết nối luồng thực thi trong `src/pipelines/phase1.py` và `src/pipelines/corruption_flow.py`.
-  - Kiểm tra tính nhất quán của các artifacts và theo dõi Contributor tracking trên GitHub nhánh `main`.
-- **Điều học được / Đóng góp chính:**
-  - Hiểu sâu sắc về thiết kế Idempotent Pipeline và quản lý trạng thái luồng dữ liệu đa tầng.
+### 1. Data Foundation (Gia Huy)
 
-### ## HoVaTen2-MSSV2
-- **Vai trò:** Phụ trách Ingestion, Làm sạch & Phục hồi dữ liệu.
-- **Công việc chi tiết đã hoàn thành:**
-  - Xây dựng module thu thập Crossref API với cơ chế Fallback offline trong `src/ingestion/crossref.py`.
-  - Chuẩn hóa schema, tính toán trường `age_days` và `text_for_embedding` trong `src/ingestion/cleaning.py`.
-  - Thực thi cơ chế Idempotent Repair phục hồi dữ liệu từ raw snapshot.
-- **Điều học được / Đóng góp chính:**
-  - Kỹ thuật truy vết nguồn gốc dữ liệu (Data Lineage) và bảo toàn raw snapshot trước khi biến đổi.
+**Branch:** `giahuy-ingestion`
 
-### ## HoVaTen3-MSSV3
-- **Vai trò:** Phụ trách RAG, Vector Database & Embedding.
-- **Công việc chi tiết đã hoàn thành:**
-  - Quản lý mô hình embedding `sentence-transformers/all-MiniLM-L6-v2`.
-  - Nạp và quản lý 3 collection riêng biệt trong ChromaDB (`papers-baseline`, `papers-corrupted`, `papers-repaired`).
-  - Xây dựng QA Agent truy vấn ngữ cảnh chính xác theo tài liệu.
-- **Điều học được / Đóng góp chính:**
-  - Cách cô lập các không gian vector để so sánh khách quan giữa dữ liệu sạch và dữ liệu bị lỗi.
+**Files:**
+- `src/ingestion/crossref.py` - Crossref API integration với retry và fallback offline
+- `src/ingestion/cleaning.py` - Data cleaning, normalization, text_for_embedding
 
-### ## HoVaTen4-MSSV4
-- **Vai trò:** Phụ trách Data Observability & Benchmark Evaluation.
-- **Công việc chi tiết đã hoàn thành:**
-  - Thiết lập Quality Gate theo chuẩn mới **Great Expectations 1.x** và giám sát Freshness SLA trong `src/observability/quality.py`.
-  - Xây dựng bộ câu hỏi đánh giá chuẩn trong `src/evaluation/testset.py`.
-  - Đo lường và xuất bảng đối chiếu 3 trạng thái vào `data/reports/corruption_report.md`.
-- **Điều học được / Đóng góp chính:**
-  - Cách thiết lập hệ thống cảnh báo sớm chặn đứng hiện tượng Silent Failure trước khi dữ liệu vào serving layer.
+**Output:**
+- `data/raw/crossref_response.json`
+- `data/raw/crossref_records.json`
+- `data/clean/papers_clean.json`
+- `data/clean/papers_clean.csv`
+
+**Commit:** `0c22d60 feat: implement Crossref ingestion and data cleaning`
+
+---
+
+### 2. Data Observability (Mạnh Hùng)
+
+**Branch:** `manhhung-observability`
+
+**Files:**
+- `src/observability/quality.py` - Great Expectations 1.x Quality Gate
+- `src/observability/reporting.py` - Phase1 & Corruption reports
+
+**Features:**
+- 6 expectations kiểm tra: row count, null values, uniqueness, text length
+- Freshness SLA monitoring (180-day threshold)
+- Markdown reports generation
+
+**Commit:** `94fb267 feat(task2): observability`
+
+---
+
+### 3. Evaluation & Corruption (Anh Minh)
+
+**Branch:** `anhminh-evaluation`
+
+**Files:**
+- `src/evaluation/testset.py` - 10 câu hỏi benchmark (summary, authors, date, categories)
+- `src/ingestion/corruption.py` - 6 corruption scenarios
+
+**Commit:** `06efb82 feat: complete evaluation testset and corruption suite by Anh Minh`
+
+---
+
+### 4. Pipeline Orchestration (Minh Tiến)
+
+**Branch:** `minhtien-pipeline`
+
+**Files:**
+- `src/pipelines/phase1.py` - End-to-end baseline pipeline
+- `src/pipelines/corruption_flow.py` - Corruption → Evaluate → Repair → Compare
+
+**Features:**
+- Idempotent pipeline design
+- ChromaDB indexing với 3 collections
+- Automatic quality gate và freshness monitoring
+
+**Commit:** `1a463a9 feat(task2): complete pipeline orchestration by Minh Tien`
+
+---
+
+## # Kết Quả Pipeline
+
+### Phase 1 (Baseline)
+| Metric | Value |
+|--------|-------|
+| Retrieval Hit Rate | 100% |
+| Quality Gate | PASSED (6/6 expectations) |
+| Freshness | FRESH (4.2% stale ratio) |
+
+### Corruption Flow
+| Metric | Baseline | Corrupted | Repaired |
+|--------|----------|-----------|----------|
+| Hit Rate | 100% | 60% | 100% |
+| Quality Gate | PASSED | **FAILED** | PASSED |
+| Freshness | FRESH | STALE | FRESH |
+
+---
+
+## # Tài Liệu Tham Khảo
+
+- `teamwork.md` - Phân công chi tiết và timeline
+- `data/reports/phase1_report.md` - Baseline report
+- `data/reports/corruption_report.md` - Corruption comparison report
