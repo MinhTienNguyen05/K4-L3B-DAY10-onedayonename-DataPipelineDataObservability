@@ -13,7 +13,7 @@
 | 1 | Gia Huy | `giahuy-ingestion` | Data Foundation: `crossref.py`, `cleaning.py`, raw data | 0c22d60 |
 | 2 | Mạnh Hùng | `manhhung-observability` | Data Observability: `quality.py` (GX 1.x), `reporting.py` | 94fb267 |
 | 3 | Anh Minh | `anhminh-evaluation` | Evaluation & Corruption: `testset.py`, `corruption.py`, Support | 06efb82 |
-| 4 | Thế Việt | `theviet-evaluation` | Evaluation Integration: test flow | (merged) |
+| 4 | Thế Việt | `theviet-evaluation` | Evaluation Integration: test flow | 671651c |
 | 5 | Minh Tiến | `minhtien-pipeline` | Pipeline Orchestration: `phase1.py`, `corruption_flow.py` | 1a463a9 |
 
 ---
