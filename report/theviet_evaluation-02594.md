@@ -5,13 +5,13 @@
 | Thông tin | Nội dung |
 | --- | --- |
 | Họ và tên | Ngô Thế Việt |
-| MSSV | [Điền MSSV] |
+| MSSV | 2A202602594 |
 | Khóa/Lớp | K4-L3B-DAY10 |
 | Tên nhóm | onedayonename |
 | Vai trò chính | Evaluation Integration & Test Flow (Tích hợp luồng đánh giá RAG & Kiểm thử đối chiếu Benchmark) |
 | Repository | https://github.com/MinhTienNguyen05/K4-L3B-DAY10-onedayonename-DataPipelineDataObservability |
 | Branch | `theviet-evaluation` |
-| Commit | `06efb82` (merged to `main`) |
+| Commit | '671651c' |
 | Ngày hoàn thành | 2026-09-26 |
 
 ---
