@@ -1,8 +1,8 @@
 # Danh Sách Thành Viên & Báo Cáo Phân Công Nhóm
 
-- **Tên Nhóm:** `[Điền tên nhóm]`
+- **Tên Nhóm:** `onedayonename`
 - **Mã Nhóm / Lớp:** `K4-L3B-DAY10`
-- **Tên Repository Nộp Bài:** `K4-L3B-DAY10-TenNhom-DataPipeline`
+- **Tên Repository Nộp Bài:** `K4-L3B-DAY10-onedayonename-DataPipeline`
 
 ---
 
