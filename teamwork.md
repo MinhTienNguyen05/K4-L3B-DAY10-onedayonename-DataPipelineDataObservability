@@ -7,13 +7,13 @@
 
 ## 👥 DANH SÁCH THÀNH VIÊN
 
-| # | Tên | Branch | Module | Files |
-|---|------|--------|--------|-------|
-| 1 | 👤 **Gia Huy** | `giahuy-ingestion` | Data Foundation | 2 files |
-| 2 | 👤 **Mạnh Hùng** | `manhhung-observability` | Data Observability | 2 files |
-| 3 | 👤 **Anh Minh** | `anhminh-support` | Support + Integration | Review + Docs |
-| 4 | 👤 **Thế Việt** | `theviet-evaluation` | Evaluation + Corruption | 2 files |
-| 5 | 👤 **Minh Tiến** | `minhtien-pipeline` | Pipeline Orchestration | 2 files |
+| # | Tên                    | Branch                     | Module                  | Files         |
+| - | ----------------------- | -------------------------- | ----------------------- | ------------- |
+| 1 | 👤**Gia Huy**     | `giahuy-ingestion`       | Data Foundation         | 2 files       |
+| 2 | 👤**Mạnh Hùng** | `manhhung-observability` | Data Observability      | 2 files       |
+| 3 | 👤**Anh Minh**    | `anhminh-support`        | Support + Integration   | Review + Docs |
+| 4 | 👤**Thế Việt**  | `theviet-evaluation`     | Evaluation + Corruption | 2 files       |
+| 5 | 👤**Minh Tiến**  | `minhtien-pipeline`      | Pipeline Orchestration  | 2 files       |
 
 ---
 
@@ -21,31 +21,31 @@
 
 ### ✅ ĐÃ HOÀN THÀNH (Không cần làm)
 
-| File | Trạng thái |
-|------|------------|
-| `src/core/config.py` | ✅ Hoàn thành |
-| `src/core/utils.py` | ✅ Hoàn thành |
-| `src/retrieval/embeddings.py` | ✅ Hoàn thành |
-| `src/retrieval/index.py` | ✅ Hoàn thành |
-| `src/retrieval/llm.py` | ✅ Hoàn thành |
-| `src/retrieval/agent.py` | ✅ Hoàn thành |
-| `src/retrieval/qa.py` | ✅ Hoàn thành |
-| `src/evaluation/metrics.py` | ✅ Hoàn thành |
-| `script/run_phase1.py` | ✅ Wrapper sẵn sàng |
+| File                              | Trạng thái          |
+| --------------------------------- | --------------------- |
+| `src/core/config.py`            | ✅ Hoàn thành       |
+| `src/core/utils.py`             | ✅ Hoàn thành       |
+| `src/retrieval/embeddings.py`   | ✅ Hoàn thành       |
+| `src/retrieval/index.py`        | ✅ Hoàn thành       |
+| `src/retrieval/llm.py`          | ✅ Hoàn thành       |
+| `src/retrieval/agent.py`        | ✅ Hoàn thành       |
+| `src/retrieval/qa.py`           | ✅ Hoàn thành       |
+| `src/evaluation/metrics.py`     | ✅ Hoàn thành       |
+| `script/run_phase1.py`          | ✅ Wrapper sẵn sàng |
 | `script/run_corruption_flow.py` | ✅ Wrapper sẵn sàng |
 
 ### ⚠️ CẦN HOÀN THIỆN (TODO)
 
-| File | Người phụ trách |
-|------|------------------|
-| `src/ingestion/crossref.py` | 👤 **Gia Huy** |
-| `src/ingestion/cleaning.py` | 👤 **Gia Huy** |
-| `src/observability/quality.py` | 👤 **Mạnh Hùng** |
-| `src/observability/reporting.py` | 👤 **Mạnh Hùng** |
-| `src/evaluation/testset.py` | 👤 **Thế Việt** |
-| `src/ingestion/corruption.py` | 👤 **Thế Việt** |
-| `src/pipelines/phase1.py` | 👤 **Minh Tiến** |
-| `src/pipelines/corruption_flow.py` | 👤 **Minh Tiến** |
+| File                                 | Người phụ trách     |
+| ------------------------------------ | ----------------------- |
+| `src/ingestion/crossref.py`        | 👤**Gia Huy**     |
+| `src/ingestion/cleaning.py`        | 👤**Gia Huy**     |
+| `src/observability/quality.py`     | 👤**Mạnh Hùng** |
+| `src/observability/reporting.py`   | 👤**Mạnh Hùng** |
+| `src/evaluation/testset.py`        | 👤**Thế Việt**  |
+| `src/ingestion/corruption.py`      | 👤**Thế Việt**  |
+| `src/pipelines/phase1.py`          | 👤**Minh Tiến**  |
+| `src/pipelines/corruption_flow.py` | 👤**Minh Tiến**  |
 
 ---
 
@@ -92,13 +92,13 @@
 
 ### BẢNG PHỤ THUỘC:
 
-| Người | Bắt đầu khi | Kết thúc khi |
-|-------|--------------|--------------|
-| 👤 **Gia Huy** | ✅ Ngay lập tức | GIA HUY xong |
-| 👤 **Mạnh Hùng** | ⏳ Gia Huy xong `cleaning.py` | MẠNH HÙNG xong |
-| 👤 **Thế Việt** | ⏳ Gia Huy xong `cleaning.py` | THẾ VIỆT xong |
-| 👤 **Minh Tiến** | ⏳ Mạnh Hùng + Thế Việt xong | MINH TIẾN xong |
-| 👤 **Anh Minh** | ⏳ Minh Tiến xong `phase1.py` | MỌI THỨ hoàn tất |
+| Người                 | Bắt đầu khi                   | Kết thúc khi       |
+| ----------------------- | -------------------------------- | -------------------- |
+| 👤**Gia Huy**     | ✅ Ngay lập tức                | GIA HUY xong         |
+| 👤**Mạnh Hùng** | ⏳ Gia Huy xong`cleaning.py`   | MẠNH HÙNG xong     |
+| 👤**Thế Việt**  | ⏳ Gia Huy xong`cleaning.py`   | THẾ VIỆT xong      |
+| 👤**Minh Tiến**  | ⏳ Mạnh Hùng + Thế Việt xong | MINH TIẾN xong      |
+| 👤**Anh Minh**    | ⏳ Minh Tiến xong`phase1.py`  | MỌI THỨ hoàn tất |
 
 ---
 
@@ -111,6 +111,7 @@
 > ⚠️ **QUAN TRỌNG:** Gia Huy làm TRƯỚC TIÊN. Không đợi ai. Các bạn khác phụ thuộc vào output của Gia Huy.
 
 > 📤 **OUTPUT cần tạo (để người khác dùng):**
+>
 > - `data/raw/crossref_response.json`
 > - `data/raw/crossref_records.json`
 > - `data/clean/papers_clean.json`
@@ -464,19 +465,23 @@ python script/run_phase1.py
 ### Nhiệm vụ chi tiết:
 
 #### 0-60 phút: Chuẩn bị & Support
+
 - Setup `.env` file từ `.env.example`
 - Kiểm tra môi trường hoạt động
 - Support Gia Huy nếu cần
 
 #### 60-120 phút: Review & Support
+
 - Review code của Gia Huy (crossref, cleaning)
 - Review code của Mạnh Hùng + Thế Việt nếu cần
 
 #### 120-180 phút: Integration Support
+
 - Support Minh Tiến viết pipeline
 - Review logic orchestration
 
 #### 180-240 phút: Final Integration
+
 - Test E2E: `python script/run_phase1.py`
 - Test E2E: `python script/run_corruption_flow.py`
 - Fix bugs nếu có
@@ -484,6 +489,7 @@ python script/run_phase1.py
 - Điền `docs/TEAM.md`
 
 ### Output cuối cùng:
+
 ```bash
 # Kiểm tra tất cả artifacts có mặt:
 ls data/results/baseline_metrics.json
@@ -548,12 +554,14 @@ PHÚT  | HOẠT ĐỘNG                                  | NGƯỜI     | ĐỢI
 ## 🚦 CHECKPOINT SIGNALS
 
 ### Checkpoint 1: GIA HUY xong (60 phút)
+
 ```bash
 # Mạnh Hùng & Thế Việt CHỈ được bắt đầu khi:
 ls data/clean/papers_clean.json  # File phải tồn tại
 ```
 
 ### Checkpoint 2: MẠNH HÙNG + THẾ VIỆT xong (120 phút)
+
 ```bash
 # Minh Tiến CHỈ được bắt đầu khi:
 ls src/observability/quality.py    # Tồn tại
@@ -562,6 +570,7 @@ ls src/ingestion/corruption.py      # Tồn tại
 ```
 
 ### Checkpoint 3: MINH TIẾN xong phase1.py (150 phút)
+
 ```bash
 # Test bằng:
 python script/run_phase1.py
@@ -569,6 +578,7 @@ python script/run_phase1.py
 ```
 
 ### Checkpoint 4: FINAL E2E (180 phút)
+
 ```bash
 python script/run_corruption_flow.py
 # Exit code phải = 0

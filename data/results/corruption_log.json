@@ -1,0 +1,74 @@
+{
+  "total_initial_records": 24,
+  "total_corrupted_records": 24,
+  "scenarios": [
+    {
+      "scenario": "drop_latest_records",
+      "dropped_count": 4,
+      "affected_paper_ids": [
+        "10.1145/3637528.3671807",
+        "10.1145/3637528.3671804",
+        "10.1145/3637528.3671808",
+        "10.1145/3637528.3671812"
+      ],
+      "description": "Dropped 4 latest records to simulate stale dataset drop."
+    },
+    {
+      "scenario": "blank_summary",
+      "affected_count": 7,
+      "affected_paper_ids": [
+        "10.1145/3637528.3671805",
+        "10.1145/3637528.3671806",
+        "10.1145/3637528.3671813",
+        "10.1145/3637528.3671816",
+        "10.1145/3637528.3671819",
+        "10.1145/3637528.3671821",
+        "10.1145/3637528.3671802"
+      ],
+      "description": "Set empty summary on 7 records to trigger null/length checks."
+    },
+    {
+      "scenario": "inject_noise",
+      "affected_count": 4,
+      "affected_paper_ids": [
+        "10.1145/3637528.3671803",
+        "10.1145/3637528.3671801",
+        "10.1145/3637528.3671810",
+        "10.1145/3637528.3671823"
+      ],
+      "description": "Injected synthetic noise into summary for 4 records."
+    },
+    {
+      "scenario": "truncate_title",
+      "affected_count": 3,
+      "affected_paper_ids": [
+        "10.1145/3637528.3671809",
+        "10.1145/3637528.3671806",
+        "10.1145/3637528.3671811"
+      ],
+      "description": "Truncated titles to < 8 chars for 3 records."
+    },
+    {
+      "scenario": "stale_date",
+      "affected_count": 4,
+      "affected_paper_ids": [
+        "10.1145/3637528.3671805",
+        "10.1145/3637528.3671803",
+        "10.1145/3637528.3671809",
+        "10.1145/3637528.3671806"
+      ],
+      "description": "Shifted publication dates back to simulate SLA violation for 4 records."
+    },
+    {
+      "scenario": "duplicate_rows",
+      "affected_count": 4,
+      "affected_paper_ids": [
+        "10.1145/3637528.3671805",
+        "10.1145/3637528.3671803",
+        "10.1145/3637528.3671809",
+        "10.1145/3637528.3671806"
+      ],
+      "description": "Duplicated 4 records to test uniqueness expectation."
+    }
+  ]
+}
